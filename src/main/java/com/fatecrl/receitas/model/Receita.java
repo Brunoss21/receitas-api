@@ -1,12 +1,21 @@
 package com.fatecrl.receitas.model;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Receita {
+public class Receita implements Serializable {
     private Long id;
     private String nome;
     private List<String> ingredientes;
     private String instrucoes;
+
+    public Receita(){
+
+    }
+
+    public Receita(Long id){
+        this.id = id;
+    }
 
     public Long getId() {
         return id;
